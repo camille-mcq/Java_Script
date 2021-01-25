@@ -59,4 +59,25 @@ switch (nombre){
 
 //4 Maths avancée
 
-let nombre_1 = 
+let nombre_1 = prompt("Entrez un premier nombre");
+let operateur = prompt("Un opérateur");
+let nombre_2 = prompt("Entrez un deuxième nombre");
+
+
+switch (operateur){
+    case (operateur = "+"):
+        alert(`Votre calcul est ${nombre_1} + ${nombre_2} = ${nombre_1+nombre_2}`);
+    case (operateur = "-"):
+        alert(`Votre calcul est ${nombre_1} - ${nombre_2} = ${nombre_1-nombre_2}`);
+    case (operateur = "*"):
+        alert(`Votre calcul est ${nombre_1} x ${nombre_2} = ${nombre_1*nombre_2}`);
+    case (operateur = "/"):
+        alert(`Votre calcul est ${nombre_1} / ${nombre_2} = ${nombre_1/nombre_2}`);
+    case (operateur = "%"):
+        alert(`Votre calcul est ${nombre_1} % ${nombre_2} = ${nombre_1%nombre_2}`);
+
+    break;
+
+    default:
+        alert("Drôle de chiffre..")
+}
