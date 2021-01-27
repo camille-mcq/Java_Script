@@ -73,7 +73,7 @@ donnees.forEach(element => {
     else {
         autre.push(element);
     }
-})
+});
 console.log(str);
 console.log(nbr);
 console.log(obj);
