@@ -1,5 +1,5 @@
 //******** Ex 1 *********
-/*// 1
+// 1
 let nom = prompt("Quel est votre nom ?");
 
 while (!nom){
@@ -36,16 +36,18 @@ while (i <= hey){
 console.log("le nombre choisi était : " + hey);
 
 //******** Ex 2 *********
-let legumes = ["carotte", "courgette", "navet", "poireau"];
-let caisseLegume = [];
-i = legumes.length;
 
-while (i-- > 0){
-    console.log(legumes);
-    caisseLegume[i]=legumes[i];
-    legumes.splice(i, 1);
+let legumes = ["carotte", "courgette", "navet", "poireau"];
+let caisseLegumes = [];
+
+while (legumes.length>0){
+    console.log(legumes[0]);
+    caisseLegumes.push(panierLegumes.splice(panierLegumes[0],1));   
 }
-console.log(caisseLegume);
+console.table("Mon premier panieu");
+console.log(legumes);
+console.table("Mon nouveau panier");
+console.table(caisseLegumes);
 
 
 //******** Ex 3 *********
@@ -68,31 +70,54 @@ alert("Bravo, vous avez trouvé la bonne réponse");
 
 //******** Ex 5 *********
 
-let année = 2021;
+let currentDate = new Date;
+let currentYear = currentDate.getFullYear();
+let randomYear = Math.round(Math.random() * (2018 - 1970) + 1970);
+let devine;
+let essaie = 0;
+
+do {
+    essaie++;
+    console.log(essaie); 
+
+    console.log(currentYear-randomYear); 
+    devine = parseInt(prompt("Si je suis né en " + randomYear + " , Quel âge j'ai aujourd'hui en " + currentYear + " ?"));
 
 
-//******** Ex 6 *********
-*/
-let panier = [];
-let answer;
+} while(devine!= currentYear-randomYear && essaie < 3);
 
-while (panier.length < 4) {
-    panier.push(prompt("Quel légume voulez vous ?"));
-    console.log(panier);
-} // remplir le panier
+if (devine == currentYear-randomYear){
+    alert("C'est tout bon Michel");
+}
 
-answer = prompt("voici votre panier : " + panier + " Voulez vous retirer un élément?"); //affichez le panier
-
-if (answer = "oui")
-    answer = prompt("Quel légume ? " + panier);
-    while (answer == panier[i]){
-    }
-else {
-    alert("bon ap!, voici votre panier " + panier);
+else{
+    alert("Tu t'es planté Gérard");
 }
 
 
-//vérifier si valeur existe ds tableau (boolean)
-    // if true = retire l'élément
-    // else bon appp
+//******** Ex 6 *********//
 
+let panierFruits = []
+do{
+    let fruit = prompt("Entrez un nom de fruit");
+    fruit = fruit.charAt(0).toUpperCase() + fruit.slice(1).toLowerCase();
+    console.log(fruit);
+    panierFruits.push(fruit);
+} while(panierFruits.length<5);
+
+console.table(panierFruits);
+
+// *****Supprimer les fruits
+
+let fruit_a_enlever = prompt("Souhaitez vous retirer un de ces fruits : \n" + panierFruits);
+fruit_a_enlever = fruit_a_enlever.charAt(0).toUpperCase() + fruit_a_enlever.slice(1).toLowerCase();
+
+while (panierFruits.includes(fruit_a_enlever)){
+    panierFruits.splice(panierFruits.indexOf(fruit_a_enlever), 1);
+    console.log("Suppression de "+ fruit_a_enlever + " du tableau");
+    fruit_a_enlever = prompt("Souhaitez vous retirer un de ces fruits : \n" + panierFruits);
+    fruit_a_enlever = fruit_a_enlever.charAt(0).toUpperCase() + fruit_a_enlever.slice(1).toLowerCase();
+
+}
+
+alert("Voici le contenu de ton panier, bon ap : " + panierFruits );
