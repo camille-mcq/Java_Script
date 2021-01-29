@@ -10,7 +10,7 @@ addition(5, 8);
 console.log("Exercice 2");
 
 let soustraction = (nbr_1, nbr_2) => {
-    console.log(`La soustraction de ${nbr_1} et de ${nbr_2} est de ${nbr_1- nbr_2}`);
+    console.log(`La soustraction de ${nbr_1} et de ${nbr_2} est de ${nbr_1 - nbr_2}`);
 }
 soustraction(6, 2);
 
@@ -78,14 +78,13 @@ let calcul = (par_1, par_2, opé) => {
             case "%":
                 return(`Votre calcul est ${par_1} % ${par_2} = ${par_1%par_2}`);
         
-            break;
-        
             default:
                 alert("Drôle de chiffres..")
 }
 }
-console.log(calcul(4, 5, "*"));
+
+console.log(calcul(10, 2, "-"));
 console.log(calcul(3, 8, "+"));
+console.log(calcul(4, 5, "*"));
 console.log(calcul(8, 2, "/"));
 console.log(calcul(10, 3, "%"));
-console.log(calcul(10, 2, "-"));

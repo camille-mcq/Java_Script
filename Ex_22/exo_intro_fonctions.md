@@ -50,3 +50,4 @@ direBonjour("Nathan", "Van Dyck");
   > nbr1, nbr2, operator
 - Il faut donc pouvoir mettre deux nombres, choisir entre + - \* ou / et obtenir une réponse.
 - _(Utilisez un switch)_
+
