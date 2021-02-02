@@ -31,7 +31,7 @@ tab.forEach((element, index) => {
 });
 //4
 console.log("");
-console.log("3.");
+console.log("4.");
 
 tab.forEach((element, index) => {
     if ((index%2 == 0) && (element.length < 7) && (element.charAt(0) == "k" || element.charAt(0) == "y" || element.charAt(0) == "m" || element.charAt(0) == "f" || element.charAt(0) == "n" || element.charAt(0) == "a" || element.charAt(0) == "e" || element.charAt(0) == "o" )){
