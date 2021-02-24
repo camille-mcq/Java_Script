@@ -57,7 +57,29 @@ document.addEventListener("keypress", (e) => {
 
 // Ex Multi-Click
 // récupérer le carré
+let carre = document.getElementById("multi-click");
+carre.setAttribute("style", "border-radius: 0%")
+carre.addEventListener("click", () => {
+    // Au 1er clic : border radius 
+    if(carre.getAttribute("style") == "border-radius: 0%")
+    {
+       carre.setAttribute("style", "border-radius: 50%");
+    } 
+    // au 2eme clic : background-color :red
+    else if (carre.getAttribute("style") == "border-radius: 50%") {
+        carre.setAttribute("style", "border-radius: 50%; background-color: red");
+    }
+    // Au 3e clic : revenir au point de départ
+    else if ( carre.getAttribute("style") == "border-radius: 50%; background-color: red"){
+        carre.setAttribute("style", "border-radius: 0%");
+    }
+});
 
-// Au 1er clic : border radius 
-// au 2eme clic : background-color :red
-// Au 3e clic : revenir au point de départ
+// Exo Set Color
+let color = document.getElementById("exo-set-color");
+let p = color.querySelector("p");
+let pick_color = document.getElementById("pick-color");
+
+pick_color.addEventListener("change", () => {
+    p.style.color = pick_color.value
+});
