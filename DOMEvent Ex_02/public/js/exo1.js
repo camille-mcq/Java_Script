@@ -39,6 +39,13 @@ div_2.addEventListener("click", () => {
     }
 });
 
+// deuxieme proposition
+let btnOnOff = document.querySelector("#parent-square");
+let squarreOnOff = document.querySelector("#squarre");
+
+btnOnOff.addEventListener("click", () => {
+    
+})
 //Exo Number Title
 // Sélectionner tous les titres
 let number_title = document.querySelectorAll("h2");
