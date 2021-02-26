@@ -45,18 +45,18 @@ liste_1.textContent = "li num 2 coucou";
 liste_0.insertAdjacentElement("afterend", liste_1);
 
 // Ex Li from Input
-let input = document.querySelector('.form-control')
-let button = document.querySelector('.form-row>div>button')
-let liste = document.querySelector('#exo-li-from-input>ul')
+let input = document.querySelector('.form-control');
+let button = document.querySelector('.form-row>div>button');
+let liste = document.querySelector('#exo-li-from-input>ul');
 
 button.addEventListener('click', () => {
     let li4 = document.createElement('li')
-    li4.innerText = input.value
-    liste.insertBefore(li4, document.querySelectorAll("#exo-li-from-input>ul>li")[0])
-    input.value = ''
+    li4.innerText = input.value;
+    liste.insertBefore(li4, document.querySelectorAll("#exo-li-from-input>ul>li")[0]);
+    input.value = "";
 })
 
-// dernier
+// dernier_proposition (solution below);
 let order = false
 let edit = document.querySelector('#exo-li-from-input>button')
 edit.addEventListener('click', () => {
@@ -82,3 +82,10 @@ edit.addEventListener('click', () => {
         }, false)
     }      
 })
+
+// 3 correction 
+let newLi = document.createElement("li");
+newLi.textContent = "li num 2";
+
+let ul = document.querySelector("#exo-add-li ul");
+ul.firstElementChild.insertAdjacentElement("afterend", newLi);
